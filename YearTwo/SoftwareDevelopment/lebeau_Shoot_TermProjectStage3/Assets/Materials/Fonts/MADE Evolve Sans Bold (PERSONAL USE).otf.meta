@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: f6c06380684937c4bb0cd895205f4c65
+timeCreated: 1522901032
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: MADE Evolve Sans
+  fontNames:
+  - MADE Evolve Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 683a94a251913284faffa720ac8af5cc, type: 3}
+  - {fileID: 12800000, guid: 1d3348d4a279f5f41aad3227bd41217f, type: 3}
+  - {fileID: 12800000, guid: 4dcf7466232e84345b25aeb678313525, type: 3}
+  - {fileID: 12800000, guid: b5a7b7bbf94672f489919f4a3925c9af, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

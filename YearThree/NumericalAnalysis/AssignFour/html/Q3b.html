@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q3b</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: 'all' } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>Q3b</h1>
+
+
+<pre class="oct-code"><span class="comment">%AssignFour - Ryan Lebeau - 104535367</span>
+<span class="comment">%Q3b</span>
+X=[0;1;2];
+Y=[5;5;3];
+
+lgPoly1=@(x) Y(1)*(((x-X(2))*(x-X(3)))/((X(1)-X(2))*(X(1)-X(3))));
+lgPoly2=@(x) Y(2)*(((x-X(1))*(x-X(3)))/((X(2)-X(1))*(X(2)-X(3))));
+lgPoly3=@(x) Y(3)*(((x-X(1))*(x-X(2)))/((X(3)-X(1))*(X(3)-X(2))));
+lgPolyFinal=@(x) lgPoly1(x) + lgPoly2(x) + lgPoly3(x);</pre>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 4.4.1</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+%AssignFour - Ryan Lebeau - 104535367
+%Q3b
+X=[0;1;2];
+Y=[5;5;3];
+
+lgPoly1=@(x) Y(1)*(((x-X(2))*(x-X(3)))/((X(1)-X(2))*(X(1)-X(3))));
+lgPoly2=@(x) Y(2)*(((x-X(1))*(x-X(3)))/((X(2)-X(1))*(X(2)-X(3))));
+lgPoly3=@(x) Y(3)*(((x-X(1))*(x-X(2)))/((X(3)-X(1))*(X(3)-X(2))));
+lgPolyFinal=@(x) lgPoly1(x) + lgPoly2(x) + lgPoly3(x);
+##### SOURCE END #####
+-->
+</body>
+</html>

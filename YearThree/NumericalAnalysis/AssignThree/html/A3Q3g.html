@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>A3Q3g</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: 'all' } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>A3Q3g</h1>
+
+
+<pre class="oct-code"><span class="comment">%AssignThree - Ryan Lebeau - 104535367</span>
+<span class="comment">%Q3g</span>
+func=@(x) cosd(x)-(2*x);
+funcd=@(x) -1*sind(x)-2;
+Pi_1=0;
+tol=0.0001;
+i=0;
+epsilon=0.0000001;
+sol=false;
+
+<span class="keyword">while</span> i&lt;10
+  Pi=Pi_1-(func(Pi_1)/funcd(Pi_1));
+  <span class="comment">%text=[num2str(Pi),' ',num2str(Pi_1)];</span>
+  <span class="comment">%disp(text);</span>
+  <span class="keyword">if</span>(abs(Pi-Pi_1)&lt;tol)
+    text=[<span class="string">'Iteration '</span>,num2str(i+1),<span class="string">': Convergence at P='</span>,num2str(Pi)];
+    disp(text);
+    sol=true;
+    break;
+  <span class="keyword">elseif</span>(abs(func(Pi))&lt;epsilon)
+    break;
+  <span class="keyword">else</span>
+    Pi_1=Pi;
+  <span class="keyword">end</span>
+  text=[<span class="string">'Iteration '</span>,num2str(i+1),<span class="string">': P='</span>,num2str(Pi)];
+  disp(text);
+  i=i+1;
+<span class="keyword">end</span>
+
+<span class="keyword">if</span>(sol==false)
+  disp(<span class="string">'Solution not found.'</span>);
+<span class="keyword">end</span></pre>
+
+<pre class="oct-code-output">Iteration 1: P=0.5
+Iteration 2: Convergence at P=0.49998
+</pre>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 4.4.1</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+%AssignThree - Ryan Lebeau - 104535367
+%Q3g
+func=@(x) cosd(x)-(2*x);
+funcd=@(x) -1*sind(x)-2;
+Pi_1=0;
+tol=0.0001;
+i=0;
+epsilon=0.0000001;
+sol=false;
+
+while i<10
+  Pi=Pi_1-(func(Pi_1)/funcd(Pi_1));
+  %text=[num2str(Pi),' ',num2str(Pi_1)];
+  %disp(text);
+  if(abs(Pi-Pi_1)<tol)
+    text=['Iteration ',num2str(i+1),': Convergence at P=',num2str(Pi)];
+    disp(text);
+    sol=true;
+    break;
+  elseif(abs(func(Pi))<epsilon)
+    break;
+  else
+    Pi_1=Pi;
+  end
+  text=['Iteration ',num2str(i+1),': P=',num2str(Pi)];
+  disp(text);
+  i=i+1;
+end
+
+if(sol==false)
+  disp('Solution not found.');
+end
+##### SOURCE END #####
+-->
+</body>
+</html>

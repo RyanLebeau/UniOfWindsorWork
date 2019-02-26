@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>A3Q3e</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: 'all' } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>A3Q3e</h1>
+
+
+<pre class="oct-code"><span class="comment">%AssignThree - Ryan Lebeau - 104535367</span>
+<span class="comment">%Q3e</span>
+func=@(x) cosd(x)-(2*x);
+A=0;
+B=1;
+tol=0.0001;
+i=0;
+epsilon=0.0000001;
+sol=false;
+
+<span class="keyword">while</span> i&lt;10
+  c=B-((func(B)*(B-A))/(func(B)-func(A)));
+  <span class="comment">%disp(func(c));</span>
+  <span class="keyword">if</span>(func(c)==0 || (B-A)&lt;tol)
+    text=[<span class="string">'Iteration '</span>,num2str(i+1),<span class="string">': Convergence at c='</span>,num2str(c)];
+    disp(text);
+    sol=true;
+    break;
+  <span class="keyword">elseif</span>(abs(func(A))&lt;epsilon || abs(func(B))&lt;epsilon)
+    break;
+  <span class="keyword">elseif</span>(func(c)&lt;0)
+    A=c;
+  <span class="keyword">elseif</span>(func(c)&gt;0)
+    B=c;
+  <span class="keyword">end</span>
+  text=[<span class="string">'Iteration '</span>,num2str(i+1),<span class="string">': c='</span>,num2str(c),<span class="string">' new interval ['</span>,num2str(A),<span class="string">','</span>,num2str(B),<span class="string">']'</span>];
+  disp(text);
+  i=i+1;
+<span class="keyword">end</span>
+
+<span class="keyword">if</span>(sol==false)
+  output=<span class="string">'Solution not found.'</span>
+<span class="keyword">end</span></pre>
+
+<pre class="oct-code-output">Iteration 1: c=0.49996 new interval [0,0.49996]
+Iteration 2: c=0.49998 new interval [0.49998,0.49996]
+Iteration 3: Convergence at c=0.49998
+</pre>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 4.4.1</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+%AssignThree - Ryan Lebeau - 104535367
+%Q3e
+func=@(x) cosd(x)-(2*x);
+A=0;
+B=1;
+tol=0.0001;
+i=0;
+epsilon=0.0000001;
+sol=false;
+
+while i<10
+  c=B-((func(B)*(B-A))/(func(B)-func(A)));
+  %disp(func(c));
+  if(func(c)==0 || (B-A)<tol)
+    text=['Iteration ',num2str(i+1),': Convergence at c=',num2str(c)];
+    disp(text);
+    sol=true;
+    break;
+  elseif(abs(func(A))<epsilon || abs(func(B))<epsilon)
+    break;
+  elseif(func(c)<0)
+    A=c;
+  elseif(func(c)>0)
+    B=c;
+  end
+  text=['Iteration ',num2str(i+1),': c=',num2str(c),' new interval [',num2str(A),',',num2str(B),']'];
+  disp(text);
+  i=i+1;
+end
+
+if(sol==false)
+  output='Solution not found.'
+end
+##### SOURCE END #####
+-->
+</body>
+</html>

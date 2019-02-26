@@ -1,0 +1,19 @@
+Script started on Thu 14 Feb 2019 01:36:29 PM EST
+]0;lebeaur@bravo: ~/Documents/DBA2[01;32mlebeaur@bravo[00m:[01;34m~/Documents/DBA2[00m$ script lebeaur_assn2que2clear[K[1Pexitsqlplus[3Pexitsqlplus lebeaur@uwindsor.ca
+[K
+SQL*Plus: Release 12.1.0.2.0 Production on Thu Feb 14 13:36:38 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter password: [KEnter password: [K[KEnter password: [KEnter password: *[KEnter password: **[KEnter password: ***[KEnter password: ****[KEnter password: *****[KEnter password: ******[KEnter password: *******[KEnter password: ********[KEnter password: *********[KEnter password: **********[KEnter password: ***********[KEnter password: ************[KEnter password: *************[KEnter password: **************[KEnter password: **************[KEnter password: 
+[KERROR:
+ORA-12170: TNS:Connect timeout occurred
+
+
+Enter user-name: [KEnter user-name: 
+[1]+  Stopped                 sqlplus lebeaur@uwindsor.ca
+]0;lebeaur@bravo: ~/Documents/DBA2[01;32mlebeaur@bravo[00m:[01;34m~/Documents/DBA2[00m$ exit
+exit
+There are stopped jobs.
+]0;lebeaur@bravo: ~/Documents/DBA2[01;32mlebeaur@bravo[00m:[01;34m~/Documents/DBA2[00m$ exit
+[K

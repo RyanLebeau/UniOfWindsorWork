@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q5b</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: 'all' } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>Q5b</h1>
+
+
+<pre class="oct-code"><span class="comment">%AssignFour - Ryan Lebeau - 104535367</span>
+<span class="comment">%Q5b</span>
+Xk=[1 2 3 4 5];
+Yk=[2 3.1 4 4.8 5.9];
+Xmean=mean(Xk);
+Ymean=mean(Yk);
+sumx2=(Xk-Xmean)*(Xk-Xmean)<span class="string">';</span>
+sumxy=(Yk-Ymean)*(Xk-Xmean)<span class="string">';</span>
+A=sumxy/sumx2;
+B=Ymean-A*Xmean;
+Fx=@(x) A*x+B;
+text=[<span class="string">'F(x)='</span>,num2str(A),<span class="string">'x+'</span>,num2str(B)];
+disp(text);</pre>
+
+<pre class="oct-code-output">F(x)=0.95x+1.11
+</pre>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 4.4.1</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+%AssignFour - Ryan Lebeau - 104535367
+%Q5b
+Xk=[1 2 3 4 5];
+Yk=[2 3.1 4 4.8 5.9];
+Xmean=mean(Xk);
+Ymean=mean(Yk);
+sumx2=(Xk-Xmean)*(Xk-Xmean)';
+sumxy=(Yk-Ymean)*(Xk-Xmean)';
+A=sumxy/sumx2;
+B=Ymean-A*Xmean;
+Fx=@(x) A*x+B;
+text=['F(x)=',num2str(A),'x+',num2str(B)];
+disp(text);
+
+
+##### SOURCE END #####
+-->
+</body>
+</html>

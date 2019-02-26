@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q4b</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: 'all' } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>Q4b</h1>
+
+
+<pre class="oct-code"><span class="comment">%AssignFour - Ryan Lebeau - 104535367</span>
+<span class="comment">%Q4b</span>
+fx=@(x) e^(-1)*x;
+X=[-2 -1 0 1 2];
+Y=[fx(X(1)) fx(X(2)) fx(X(3)) fx(X(4)) fx(X(5))];
+
+lgPoly1=@(x) Y(1)*(((x-X(2))*(x-X(3))*(x-X(4))*(x-X(5)))/((X(1)-X(2))*(X(1)-X(3))*(X(1)-X(4))*(X(1)-X(5))));
+lgPoly2=@(x) Y(2)*(((x-X(1))*(x-X(3))*(x-X(4))*(x-X(5)))/((X(2)-X(1))*(X(2)-X(3))*(X(2)-X(4))*(X(2)-X(5))));
+lgPoly3=@(x) Y(3)*(((x-X(1))*(x-X(2))*(x-X(4))*(x-X(5)))/((X(3)-X(1))*(X(3)-X(2))*(X(3)-X(4))*(X(3)-X(5))));
+lgPoly4=@(x) Y(4)*(((x-X(1))*(x-X(2))*(x-X(3))*(x-X(5)))/((X(4)-X(1))*(X(4)-X(2))*(X(4)-X(3))*(X(4)-X(5))));
+lgPoly5=@(x) Y(4)*(((x-X(1))*(x-X(2))*(x-X(3))*(x-X(4)))/((X(5)-X(1))*(X(5)-X(2))*(X(5)-X(3))*(X(5)-X(4))));
+lgPolyFinal=@(x) lgPoly1(x) + lgPoly2(x) + lgPoly3(x) + lgPoly4(x) + lgPoly5(x);
+lgPolyFinal(0.5)</pre>
+
+<pre class="oct-code-output">ans =  0.19831
+</pre>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 4.4.1</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+%AssignFour - Ryan Lebeau - 104535367
+%Q4b
+fx=@(x) e^(-1)*x;
+X=[-2 -1 0 1 2];
+Y=[fx(X(1)) fx(X(2)) fx(X(3)) fx(X(4)) fx(X(5))];
+
+lgPoly1=@(x) Y(1)*(((x-X(2))*(x-X(3))*(x-X(4))*(x-X(5)))/((X(1)-X(2))*(X(1)-X(3))*(X(1)-X(4))*(X(1)-X(5))));
+lgPoly2=@(x) Y(2)*(((x-X(1))*(x-X(3))*(x-X(4))*(x-X(5)))/((X(2)-X(1))*(X(2)-X(3))*(X(2)-X(4))*(X(2)-X(5))));
+lgPoly3=@(x) Y(3)*(((x-X(1))*(x-X(2))*(x-X(4))*(x-X(5)))/((X(3)-X(1))*(X(3)-X(2))*(X(3)-X(4))*(X(3)-X(5))));
+lgPoly4=@(x) Y(4)*(((x-X(1))*(x-X(2))*(x-X(3))*(x-X(5)))/((X(4)-X(1))*(X(4)-X(2))*(X(4)-X(3))*(X(4)-X(5))));
+lgPoly5=@(x) Y(4)*(((x-X(1))*(x-X(2))*(x-X(3))*(x-X(4)))/((X(5)-X(1))*(X(5)-X(2))*(X(5)-X(3))*(X(5)-X(4))));
+lgPolyFinal=@(x) lgPoly1(x) + lgPoly2(x) + lgPoly3(x) + lgPoly4(x) + lgPoly5(x);
+lgPolyFinal(0.5)
+##### SOURCE END #####
+-->
+</body>
+</html>

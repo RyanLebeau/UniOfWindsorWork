@@ -1,0 +1,61 @@
+Assignment Five - Circle of Trust App
+Ryan Lebeau - 104535367
+
+The User is defined as an object of a node class that stores their
+userID and circleID (if user is not in a circle value is 0). When the
+circle is created both an ArrayList and a Queue are created specific
+to the new circle. The ArrayList stores the userID's that are members
+of the circle (max of 10 element) where the first element is the owner
+of the group. The Queue will store a max of 10 messages that are posted
+by users who are members of the circles ID. If a user is the first
+element in the circleID's Array List then they can remove or add people
+to the circle (as long as it is not full). If the Array List for a circle
+is ever empty the entire circle is deleted.
+
+Posting a message:
+posting(userID, msg, circle)
+	if the userID is in the circle's ArrayList of users and if the queue is not full
+		add the message to the queue for the circle passed in
+	else if the userID is not in the circle or the queue is full
+		print to user "message failed to post"
+
+Getting the previous 10 messages in a circle:
+getMessages(userID, circleID)
+	loop for the size of the queue
+		dequeue message from the queue 
+		store in an array of strings
+		enqueue each message that was previously dequeued back
+	loop for the size of the array
+		print each message from the array in order back to front
+
+Joining a circle:
+joinCircle(userID, circleID)
+	if the ArrayList of users form circleID is not full
+		add userID to circle
+		change users circleID stored in user class to new circleID
+	else if the circle is full
+		print to user "circle is full and can not be joined"
+
+Leaving a Circle:
+leaveCircle(userID, circleID)
+	if userID is within the circle that circleID represents
+		remove user from ArrayList of users within the circle
+		change users circleID to 0
+	if the ArrayList within circle is now empty
+		free all data from the circles queue
+		remove ArrayList of users
+		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+

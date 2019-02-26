@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q6b</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: 'all' } }
+});
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<style>
+body > * {
+  max-width: 42em;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  padding-left: 7.5em;
+  padding-right: 7.5em;
+}
+pre, code {
+  max-width: 50em;
+  font-family: monospace;
+}
+pre.oct-code {
+  border: 1px solid Grey;
+  padding: 5px;
+}
+pre.oct-code-output {
+  margin-left: 2em;
+}
+span.comment {
+  color: ForestGreen;
+}
+span.keyword {
+  color: Blue;
+}
+span.string {
+  color: DarkOrchid;
+}
+footer {
+  margin-top: 2em;
+  font-size: 80%;
+}
+a, a:visited {
+  color: Blue;
+}
+h2 {
+  font-family: "Roboto Condensed", serif;
+  margin-top: 1.5em;
+}
+h2 a, h2 a:visited {
+  color: Black;
+}
+</style>
+
+</head>
+<body>
+<h1>Q6b</h1>
+
+
+<pre class="oct-code"><span class="comment">%AssignFour - Ryan Lebeau - 104535367</span>
+<span class="comment">%Q6b</span>
+Fx=@(x) A/x;
+Xk=[0.5 1 1.5 2];
+Yk=[7.1 3.7 2.6 2];
+A=0;
+B=0;
+<span class="keyword">for</span> i=1:1:4
+  <span class="keyword">if</span>(i&lt;=4)
+    A=A+Yk(i)/Xk(i);
+    B=B+Xk(i)^(-2);
+  <span class="keyword">endif</span>
+<span class="keyword">endfor</span>
+A=A/B;
+text=[<span class="string">'f(x)='</span>,num2str(A),<span class="string">'/x'</span>];
+disp(text);</pre>
+
+<pre class="oct-code-output">f(x)=3.6234/x
+</pre>
+
+<footer>
+<hr>
+<a href="https://www.octave.org">Published with GNU Octave 4.4.1</a>
+</footer>
+<!--
+##### SOURCE BEGIN #####
+%AssignFour - Ryan Lebeau - 104535367
+%Q6b
+Fx=@(x) A/x;
+Xk=[0.5 1 1.5 2];
+Yk=[7.1 3.7 2.6 2];
+A=0;
+B=0;
+for i=1:1:4
+  if(i<=4)
+    A=A+Yk(i)/Xk(i);
+    B=B+Xk(i)^(-2);
+  endif
+endfor
+A=A/B;
+text=['f(x)=',num2str(A),'/x'];
+disp(text);
+##### SOURCE END #####
+-->
+</body>
+</html>

@@ -1,0 +1,16 @@
+/*
+A
+This is a legal integer constant
+
+B
+This is a legal integer constant
+
+C
+This is not a legal constant in C
+
+D
+This is not a legal constant in C
+
+E
+This is a legal floating point constant
+*/

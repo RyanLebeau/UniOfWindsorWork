@@ -1,0 +1,65 @@
+<graph version="v4.3" name="" author="" interval="0.2" timeMode="asynchronous" distributionMode="instantaneous" speed="100" actions="1" dice="D5" skill="" strategy="" multiplayer="" width="1300" height="860" numberOfRuns="100" visibleRuns="25" colorCoding="0">
+  <connection type="Resource Connection" start="26" end="2" label="5" position="0.5" color="Black" thickness="5"/>
+  <node symbol="Drain" x="924" y="312" color="Orange" caption="MoonkinDruidDMG" thickness="5" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1"/>
+  <node symbol="Drain" x="966" y="118" color="Blue" caption="WarriorDMG" thickness="5" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1"/>
+  <node symbol="Drain" x="960" y="179" color="Green" caption="RogueDMG" thickness="5" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1"/>
+  <node symbol="Drain" x="948" y="245" color="Yellow" caption="MageDMG" thickness="5" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1"/>
+  <node symbol="Drain" x="165" y="520" color="Red" caption="Boss Damage" thickness="5" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1"/>
+  <connection type="Resource Connection" start="13" end="22" label="15" position="0.5" color="Purple" thickness="5"/>
+  <connection type="Resource Connection" start="10" end="23" label="15" position="0.5" color="Purple" thickness="5"/>
+  <connection type="Resource Connection" start="11" end="24" label="15" position="0.5" color="Purple" thickness="5"/>
+  <connection type="Resource Connection" start="12" end="25" label="15" position="0.5" color="Purple" thickness="5"/>
+  <node symbol="Source" x="446" y="389" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <node symbol="Source" x="486" y="437" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <node symbol="Source" x="519" y="507" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <node symbol="Source" x="448" y="322" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <connection type="Resource Connection" start="55" end="5" label="D11+44" position="0.5" color="Black" thickness="5"/>
+  <connection type="Resource Connection" start="22" end="5" label="D16+4" position="0.29" color="Black" thickness="5"/>
+  <connection type="Resource Connection" start="23" end="5" label="D16+4" position="0.3" color="Black" thickness="5"/>
+  <connection type="Resource Connection" start="24" end="5" label="D16+4" position="0.5" color="Black" thickness="5"/>
+  <connection type="Resource Connection" start="25" end="5" label="D16+4" position="0.44" color="Black" thickness="5"/>
+  <connection type="Resource Connection" start="26" end="3" label="D6+14" position="0.5" color="Black" thickness="5"/>
+  <connection type="Resource Connection" start="26" end="4" label="D30" position="0.5" color="Black" thickness="5"/>
+  <connection type="Resource Connection" start="26" end="1" label="D11+4" position="0.5" color="Black" thickness="5"/>
+  <node symbol="Pool" x="320" y="342" color="Purple" caption="Priest" thickness="5" captionPos="0.43" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="1000" capacity="-1" displayCapacity="0"/>
+  <node symbol="Pool" x="363" y="409" color="Green" caption="Rogue" thickness="5" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="1000" capacity="-1" displayCapacity="0"/>
+  <node symbol="Pool" x="404" y="480" color="Yellow" caption="Mage" thickness="5" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="1000" capacity="-1" displayCapacity="0"/>
+  <node symbol="Pool" x="420" y="550" color="Orange" caption="Moonkin Druid" thickness="5" captionPos="0.41" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="1000" capacity="-1" displayCapacity="0"/>
+  <node symbol="Pool" x="679" y="141" color="Red" caption="Boss" thickness="5" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="4500" capacity="-1"/>
+  <node symbol="Source" x="447" y="46" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <connection type="Resource Connection" start="27" end="54" label="2" position="-0.42" color="Purple" thickness="5"/>
+  <node symbol="EndCondition" x="320" y="295" color="Black" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1"/>
+  <node symbol="EndCondition" x="368" y="360" color="Black" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1"/>
+  <node symbol="EndCondition" x="400" y="428" color="Black" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1"/>
+  <node symbol="EndCondition" x="452" y="608" color="Black" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1"/>
+  <connection type="State Connection" start="55" end="38" label="==0" position="0.5" color="Blue" thickness="5"/>
+  <connection type="State Connection" start="22" end="29" label="==0" position="0.5" color="Purple" thickness="5"/>
+  <connection type="State Connection" start="23" end="30" label="==0" position="0.5" color="Green" thickness="5"/>
+  <connection type="State Connection" start="25" end="32" label="==0" position="0.5" color="Orange" thickness="5"/>
+  <connection type="State Connection" start="24" end="31" label="==0" position="0" color="Yellow" thickness="5"/>
+  <node symbol="EndCondition" x="151" y="280" color="Black" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1"/>
+  <connection type="Resource Connection" start="54" end="48" label="8" position="-0.5" color="Purple" thickness="5">
+    <point x="43" y="58"/>
+  </connection>
+  <connection type="State Connection" start="47" end="13" label="2" position="0.5" color="Purple" thickness="5"/>
+  <connection type="State Connection" start="47" end="10" label="1" position="0.5" color="Purple" thickness="5"/>
+  <connection type="State Connection" start="47" end="11" label="1" position="-0.5" color="Purple" thickness="5"/>
+  <connection type="State Connection" start="47" end="12" label="1" position="-0.38" color="Purple" thickness="5"/>
+  <node symbol="Converter" x="591" y="258" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <connection type="State Connection" start="44" end="47" label="*" position="0.5" color="Purple" thickness="5"/>
+  <connection type="Resource Connection" start="54" end="44" label="5" position="0.5" color="Purple" thickness="5"/>
+  <node symbol="Gate" x="675" y="355" color="Purple" caption="SmallHeal" thickness="5" captionPos="0.07" activationMode="passive" pullMode="pull any" actions="1" gateType="deterministic"/>
+  <node symbol="Converter" x="80" y="146" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <connection type="Resource Connection" start="48" end="55" label="20" position="0.5" color="Purple" thickness="5"/>
+  <connection type="State Connection" start="55" end="51" label="&lt;=1500" position="0.5" color="Blue" thickness="5"/>
+  <node symbol="Source" x="329" y="191" color="Purple" caption="" thickness="5" captionPos="0.25" activationMode="automatic" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <connection type="Resource Connection" start="51" end="55" label="20" position="0.5" color="Purple" thickness="5">
+    <point x="246" y="191"/>
+  </connection>
+  <connection type="State Connection" start="51" end="47" label="*" position="0.5" color="Purple" thickness="5"/>
+  <node symbol="Pool" x="358" y="58" color="Purple" caption="PriestMana" thickness="5" captionPos="0.63" activationMode="automatic" pullMode="push all" actions="1" resourceColor="Black" startingResources="1000" capacity="-1" displayCapacity="0"/>
+  <node symbol="Pool" x="259" y="276" color="Blue" caption="Warrior" thickness="5" captionPos="0.4" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="2000" capacity="-1" displayCapacity="0"/>
+  <node symbol="TextLabel" x="630" y="40" color="Black" caption="Done By Ryan Lebeau"/>
+  <connection type="State Connection" start="26" end="58" label="==0" position="0.5" color="Red" thickness="5"/>
+  <node symbol="EndCondition" x="730" y="88" color="Black" caption="" thickness="5" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1"/>
+</graph>
