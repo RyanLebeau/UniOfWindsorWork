@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhmtl11/DTD/xhtml11.dtd">
+
+<!-- XML/XHTML boilerplate code -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+        <title>Ryan Lebeau's Page</title>
+  </head>
+  <body style="background-color:#4dd2ff">  
+	  <!-- my header-->
+      <h1><i>Ryan Lebeau's Day to Day</i></h1>
+	  <!-- content paragraph with first line indentation of 20pixels-->
+      <p style="text-indent: 20px">
+	  My name is Ryan Lebeau and I am a fourth year Honours Computer Science student. This webpage<br>
+	  will be about my day to day schedule and life since it can get pretty hectic. The average week starts<br>
+	  with an 8hour work day Monday at Chrysler (usually day shift). Then I try to do 2-3hours of work on<br>
+	  an Ignite project I have with Dr.Marquardt when I get home. The project is a Machine Learning model<br>
+	  around the seperations of proteins within LDL (a common measurement for heart attack prevention). On<br>
+	  Tuesday I have AI Concepts class and then my TA office hours for COMP-1400, which nobody ever goes to so it<br> 
+	  gives me a chance to work on this class. Class begins at 10am Wednesday for Principle of Programming<br>
+	  Languages and then I am the Lab Instructor for a COMP-1400 lab. Thursday I have to work an afternoon shift<br>
+	  at Chrysler so I usually do as much school work as I can beforehand. Then, on Friday, I work days so<br>
+	  once I get home I finish up the 5hour week requirement for my Ignite project or any outstanding school<br>
+	  work I haven't completed. The weekend is a little bit more relaxed, with only one shift at Chrysler on saturday<br>
+	  and Sunday is a catch up day on school while watching the Lion's lose. 
+	  <!-- break to seperate paragraph-->
+	  <br><br>
+	  <!-- link to email me-->
+	  <b>If you have any questions for me about a project I am working on please feel free to email me at 
+	  <a href="mailto:lebeaur@uwindsor.ca">lebeaur@uwindsor.ca</a></b>
+	  <br><br>
+	  <!-- link to my personal website that hopefully works-->
+	  <b>You are also wecome to visit my personal <a href="http://www.ryanlebeau.net">website</a> but keep in mind it is a work in progress.</b>
+	  </p>
+	  <br>
+	  
+	  <!-- table creation with 8 columns and 3 rows with a caption-->
+	  <table>
+		<caption><b>My In-Person Classes</b></caption>
+		<!-- first row-->
+		<tr>
+			<th>Time</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th>Saturday</th>
+			<th>Sunday</th>
+		</tr>
+		<!-- second row-->
+		<tr>
+			<td>10:00am</td>
+			<td>COMP-4400<br>Principles of Programming<br>Languages</td>
+			<td></td>
+			<td>COMP-4400<br>Principles of Programming<br>Languages</td>
+			<td></td>
+			<td>COMP-4990<br>Research Project</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<!-- third row-->
+		<tr>
+			<td>2:30pm</td>
+			<td></td>
+			<td>COMP-3710<br>Artificial Intelligence<br>Concepts</td>
+			<td></td>
+			<td>COMP-3710<br>Artificial Intelligence<br>Concepts</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	  </table>
+	  <!-- stylesheet format to have lines in table-->
+	  <style>
+	  table, th, td{border: 1px solid black}
+	  </style>
+	  <hr>
+	  
+	  <!-- unordered list of all my courses-->
+	  <p><b>All of my courses this semester</b></p>
+	  <ul>
+		<li>Intro to Astronomy</li>
+		<li>Intro to the Internet</li>
+		<li>Artificial Intelligence Concepts</li>
+		<li>Principles of Programming Languages</li>
+		<li>Research Project</li>
+	  </ul>
+	  <br>
+	  <!-- ordered list of my hardest courses with numbered type-->
+	  <p><b>My courses from most to least difficult</b></p>
+	  <ol type="1">
+		<li>Principles of Programming Languages</li>
+		<li>Artificial Intelligence Concepts</li>
+		<li>Research Project</li>
+		<li>Intro to the Internet</li>
+		<li>Intro to Astronomy</li>
+	  </ol>
+	  <hr>
+	  
+	  <!-- figure element for my image and its caption-->
+	  <figure>
+		<img src="SleepyPitbull.jpg" alt="Sleepy Pitbull">
+		<figcaption>A picture of my favourite dog to hopefully brighten up your long day of marking</figcaption>
+	  </figure>
+	  <hr>
+	  
+	  <!-- button element to bring to top of page-->
+	  <button onclick="TopFunc()" id="bttn" title="Top">Top of Page</button> 
+	  <!-- javascript to bring page scroll to top-->
+	  <script>
+	  function TopFunc(){
+		document.documentElement.scrollTop = 0;
+	  }
+	  </script>
+	  
+	   
+  </body>
+        <!-- these must be the last two lines of an HTML document -->
+</html>

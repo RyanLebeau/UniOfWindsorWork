@@ -1,0 +1,97 @@
+/* Setting font style */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Styling for the page header */
+#navHeader {
+    background-color: #2ebfc9;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+#navHeader a{
+    float: left;
+    display: block;
+    color: #292929;
+    text-align: center;
+    font-size: 1.6em;
+    padding: 0.5em 1em 0.5em 1em;
+    text-decoration: none;
+}
+#navHeader a:hover{
+    background: #187980;
+    color: #d4d4d4;
+}
+
+/*general body styling*/
+.else{
+    margin-top: 4.2em;
+}
+
+/*styling for the index page paragraphs*/
+#paraList{
+    list-style: none;
+    width: 100%;
+}
+#paraList li{
+    float:left;
+    width: 30%;
+    padding-right: 2em;
+}
+
+/*styling for the table on page 1*/
+#scheduleTable{
+    border: 2px dashed black;
+}
+th, td{
+    border: 2px solid black;
+}
+.tableImg{
+    width: 4em;
+    height: auto;
+}
+
+/*styling for the lists on page 2*/
+#uoMusic{
+    list-style-type: circle;
+    display: block;
+}
+#dFood{
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+/*styling for all dog pictures*/
+figure{
+    display: block;
+    margin-top: 3em;
+    float: left;
+}
+figure figcaption{
+    font-style: italic;
+}
+#firstDogPic{
+    width: 50%;
+    height: auto;
+}
+#secondDogPic{
+    width: 40%;
+    height: auto;
+}
+#thirdDogPic{
+    width: 30%;
+    height: auto;
+}
+#fourthDogPic{
+    width: 40%;
+    height: auto;
+}
+#fifthDogPic{
+    width: 50%;
+    height: auto;
+}

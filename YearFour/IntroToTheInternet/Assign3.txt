@@ -1,0 +1,11 @@
+Some remarks about the FTP system:
+  This is not the first time I have used an FTP system, previously connecting to the cs 
+server using bitvise. This is however the first time an electron account has been set up 
+for me and I am looking forward to using that. An FTP (File Transfer Protocol)
+is a network protocol that connects you to a server file system, in this case
+my local machine to the cs uwindsor servers (technically my electron account within
+that server). I have connected over an SSH (Secure Socket Shell) protocol which 
+means I can securely connect to the server over an an unsecured network. I connected
+to the server through port 22 whihc is the common port for an SSH connection for a FTP
+system. If this does not cover specific remarks you would have liked to hear please
+email me at lebeaur@uwindsor.ca and I can asnwer anyhthing that you had in mind.
